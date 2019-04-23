@@ -1,7 +1,6 @@
 # This file has been automatically pushed to all dashboard benchmarks (except for Java Demo).
 # All changes made to this file should be propagated to all dashboard benchmarks. Do not change this file individually!  
 skipVerification: true
-classpathCmd:  echo "`find / "$PWD" -name "jfinal-3.5-jar-with-dependencies.jar"`:" | head -1
 cbmcArguments:
   dependenciesOnClasspath: true
   java-max-vla-length: 100000
