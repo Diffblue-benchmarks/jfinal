@@ -9,7 +9,7 @@ phases:
 #0 Pretty tests. If timeout then go to #3
  timeout: 300
  cbmcArguments:
-   classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
+   classpath: '/tools/cbmc/models.jar:PATH_PREFIX/deps/jars/jedis-2.7.2.jar:.'
    depth: 1500
    java-assume-inputs-non-null: true
    max-nondet-array-length: 10
@@ -24,7 +24,7 @@ phases:
 #1 Increased values, allow null. If timeout then go to #3
  timeout: 300
  cbmcArguments:
-   classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
+   classpath: '/tools/cbmc/models.jar:PATH_PREFIX/deps/jars/jedis-2.7.2.jar:.'
    depth: 1500
    java-assume-inputs-non-null: false
    max-nondet-array-length: 20
@@ -38,7 +38,7 @@ phases:
 #2 Increased values, allow exceptions
  timeout: 300
  cbmcArguments:
-   classpath: '/tools/cbmc/models.jar:.'
+   classpath: '/tools/cbmc/models.jar:PATH_PREFIX/deps/jars/jedis-2.7.2.jar:.'
    depth: 3000
    java-assume-inputs-non-null: false
    max-nondet-array-length: 30
@@ -50,7 +50,7 @@ phases:
 #3 Fallback phase - copy of #2 with single-path symex, unbounded unwind and depth, lower timeout
  timeout: 100
  cbmcArguments:
-   classpath: '/tools/cbmc/models.jar:.'
+   classpath: '/tools/cbmc/models.jar:PATH_PREFIX/deps/jars/jedis-2.7.2.jar:.'
    depth: false
    java-assume-inputs-non-null: false
    max-nondet-array-length: 30
@@ -74,19 +74,7 @@ units:
       sourceFile: com/jfinal/plugin/redis/serializer/FstSerializer.java
     # Child of RedisPlugin.class
     # Child Coverage: Unknown %
-    - dir: target/generated-classes/jacoco
-      file: com/jfinal/plugin/redis/serializer/FstSerializer.class
-      sourceDir: src/main/java
-      sourceFile: com/jfinal/plugin/redis/serializer/FstSerializer.java
-    # Child of RedisPlugin.class
-    # Child Coverage: Unknown %
     - dir: target/classes
-      file: com/jfinal/plugin/redis/Cache.class
-      sourceDir: src/main/java
-      sourceFile: com/jfinal/plugin/redis/Cache.java
-    # Child of RedisPlugin.class
-    # Child Coverage: Unknown %
-    - dir: target/generated-classes/jacoco
       file: com/jfinal/plugin/redis/Cache.class
       sourceDir: src/main/java
       sourceFile: com/jfinal/plugin/redis/Cache.java
@@ -98,19 +86,7 @@ units:
       sourceFile: com/jfinal/plugin/IPlugin.java
     # Child of RedisPlugin.class
     # Child Coverage: Unknown %
-    - dir: target/generated-classes/jacoco
-      file: com/jfinal/plugin/IPlugin.class
-      sourceDir: src/main/java
-      sourceFile: com/jfinal/plugin/IPlugin.java
-    # Child of RedisPlugin.class
-    # Child Coverage: Unknown %
     - dir: target/classes
-      file: com/jfinal/plugin/redis/Redis.class
-      sourceDir: src/main/java
-      sourceFile: com/jfinal/plugin/redis/Redis.java
-    # Child of RedisPlugin.class
-    # Child Coverage: Unknown %
-    - dir: target/generated-classes/jacoco
       file: com/jfinal/plugin/redis/Redis.class
       sourceDir: src/main/java
       sourceFile: com/jfinal/plugin/redis/Redis.java
@@ -122,49 +98,13 @@ units:
       sourceFile: com/jfinal/plugin/redis/serializer/ISerializer.java
     # Child of RedisPlugin.class
     # Child Coverage: Unknown %
-    - dir: target/generated-classes/jacoco
-      file: com/jfinal/plugin/redis/serializer/ISerializer.class
-      sourceDir: src/main/java
-      sourceFile: com/jfinal/plugin/redis/serializer/ISerializer.java
-    # Child of RedisPlugin.class
-    # Child Coverage: Unknown %
     - dir: target/classes
       file: com/jfinal/kit/StrKit.class
       sourceDir: src/main/java
       sourceFile: com/jfinal/kit/StrKit.java
     # Child of RedisPlugin.class
     # Child Coverage: Unknown %
-    - dir: target/generated-classes/jacoco
-      file: com/jfinal/kit/StrKit.class
-      sourceDir: src/main/java
-      sourceFile: com/jfinal/kit/StrKit.java
-    # Child of RedisPlugin.class
-    # Child Coverage: Unknown %
-    - dir: target/generated-classes/jacoco
-      file: com/jfinal/plugin/redis/RedisPlugin.class
-      sourceDir: src/main/java
-      sourceFile: com/jfinal/plugin/redis/RedisPlugin.java
-    # Child of RedisPlugin.class
-    # Child Coverage: Unknown %
     - dir: target/classes
       file: com/jfinal/plugin/redis/IKeyNamingPolicy.class
       sourceDir: src/main/java
       sourceFile: com/jfinal/plugin/redis/IKeyNamingPolicy.java
-    # Child of RedisPlugin.class
-    # Child Coverage: Unknown %
-    - dir: target/generated-classes/jacoco
-      file: com/jfinal/plugin/redis/IKeyNamingPolicy.class
-      sourceDir: src/main/java
-      sourceFile: com/jfinal/plugin/redis/IKeyNamingPolicy.java
-  # Target Coverage: Unknown %
-  - target:
-    - dir: target/generated-classes/jacoco
-      file: com/jfinal/plugin/redis/RedisPlugin.class
-      sourceDir: src/main/java
-      sourceFile: com/jfinal/plugin/redis/RedisPlugin.java
-    # Child of RedisPlugin.class
-    # Child Coverage: Unknown %
-    - dir: target/classes
-      file: com/jfinal/plugin/redis/RedisPlugin.class
-      sourceDir: src/main/java
-      sourceFile: com/jfinal/plugin/redis/RedisPlugin.java
