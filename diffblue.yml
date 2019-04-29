@@ -17,6 +17,9 @@ dependenciesOnClasspath:
 -
   source: jedis-2.7.2.jar
   classFile: redis/clients/util/SafeEncoder.class
+-
+  source: jedis-2.7.2.jar
+  classFile: redis/clients/JedisPoolAbstract.class
 cbmcArguments:
   java-max-vla-length: 100000
 phases:
