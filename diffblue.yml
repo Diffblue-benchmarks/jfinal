@@ -10,6 +10,42 @@ dependenciesOnClasspath:
   classFile: redis/clients/jedis/BinaryJedis.class
 -
   source: jedis-2.7.2.jar
+  classFile: redis/clients/jedis/commands/JedisCommands.class
+-
+  source: jedis-2.7.2.jar
+  classFile: redis/clients/jedis/commands/MultiKeyCommands.class
+-
+  source: jedis-2.7.2.jar
+  classFile: redis/clients/jedis/commands/MultiKeyBinaryCommands.class
+-
+  source: jedis-2.7.2.jar
+  classFile: redis/clients/jedis/commands/AdvancedJedisCommands.class
+-
+  source: jedis-2.7.2.jar
+  classFile: redis/clients/jedis/commands/AdvancedBinaryJedisCommands.class
+-
+  source: jedis-2.7.2.jar
+  classFile: redis/clients/jedis/commands/BinaryJedisCommands.class
+-
+  source: jedis-2.7.2.jar
+  classFile: redis/clients/jedis/commands/ScriptingCommands.class
+-
+  source: jedis-2.7.2.jar
+  classFile: redis/clients/jedis/commands/BinaryScriptingCommands.class
+-
+  source: jedis-2.7.2.jar
+  classFile: redis/clients/jedis/commands/BasicCommands.class
+-
+  source: jedis-2.7.2.jar
+  classFile: redis/clients/jedis/commands/ClusterCommands.class
+-
+  source: jedis-2.7.2.jar
+  classFile: redis/clients/jedis/commands/SentinelCommands.class
+-
+  source: jedis-2.7.2.jar
+  classFile: redis/clients/jedis/commands/ModuleCommands.class
+-
+  source: jedis-2.7.2.jar
   classFile: redis/clients/jedis/JedisPool.class
 -
   source: jedis-2.7.2.jar
