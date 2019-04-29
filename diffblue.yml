@@ -7,7 +7,16 @@ dependenciesOnClasspath:
   classFile: redis/clients/jedis/Jedis.class
 -
   source: jedis-2.7.2.jar
+  classFile: redis/clients/jedis/BinaryJedis.class
+-
+  source: jedis-2.7.2.jar
   classFile: redis/clients/jedis/JedisPool.class
+-
+  source: jedis-2.7.2.jar
+  classFile: redis/clients/jedis/JedisPoolAbstract.class
+-
+  source: jedis-2.7.2.jar
+  classFile: redis/clients/jedis/util/Pool.class
 -
   source: jedis-2.7.2.jar
   classFile: redis/clients/jedis/JedisPoolConfig.class
@@ -16,10 +25,14 @@ dependenciesOnClasspath:
   classFile: redis/clients/jedis/Protocol.class
 -
   source: jedis-2.7.2.jar
-  classFile: redis/clients/util/SafeEncoder.class
+  classFile: redis/clients/jedis/util/SafeEncoder.class
 -
-  source: jedis-2.7.2.jar
-  classFile: redis/clients/JedisPoolAbstract.class
+  source: commons-pool2-2.3.jar
+  classFile: org/apache/commons/pool2/impl/GenericObjectPoolConfig.class
+-
+  source: commons-pool2-2.3.jar
+  classFile: org/apache/commons/pool2/impl/BaseObjectPoolConfig.class
+
 cbmcArguments:
   java-max-vla-length: 100000
 phases:
