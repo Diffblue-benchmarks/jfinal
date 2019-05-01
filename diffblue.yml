@@ -71,7 +71,6 @@ dependenciesOnClasspath:
 
 cbmcArguments:
   java-max-vla-length: 100000
-  smart-harness: simplest-constructor-and-nondet
 phases:
 -
 #0 Pretty tests. If timeout then go to #3
