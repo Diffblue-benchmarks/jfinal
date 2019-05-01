@@ -1,5 +1,6 @@
 # This file has been automatically pushed to all dashboard benchmarks (except for Java Demo).
 # All changes made to this file should be propagated to all dashboard benchmarks. Do not change this file individually!  
+skipVerification: true
 dependenciesOnClasspath: 
 -
   source: jedis-2.7.2.jar
@@ -70,6 +71,7 @@ dependenciesOnClasspath:
 
 cbmcArguments:
   java-max-vla-length: 100000
+  smart-harness: simplest-constructor-and-nondet
 phases:
 -
 #0 Pretty tests. If timeout then go to #3
